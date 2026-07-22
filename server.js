@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static(__dirname));
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "hp-printer.html"));
+    res.sendFile(path.join(__dirname, "hp-printer-support-line.html"));
 });
 
 app.get("*", (req, res) => {
@@ -14,7 +14,7 @@ app.get("*", (req, res) => {
 
     res.sendFile(file, err => {
         if (err) {
-            res.sendFile(path.join(__dirname, "hp-printer.html"));
+            res.sendFile(path.join(__dirname, "hp-printer-support-line.html"));
         }
     });
 });
